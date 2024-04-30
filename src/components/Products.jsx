@@ -17,6 +17,7 @@ const Products = () => {
         return <div>No products found</div>;
     }
 
+    
     return (
         <div>
         <Box data={data} />
