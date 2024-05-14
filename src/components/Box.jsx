@@ -1,6 +1,9 @@
-import React from 'react';
+// import React from "react";
 import { Link } from 'react-router-dom';
 import '../box.css'; 
+import React, {useContext} from "react";
+import { ThemeContext } from "../context/themeContext";
+
 
 const Box = ({ data, size = 'large', round }) => {
     const sizes = {
@@ -11,14 +14,17 @@ const Box = ({ data, size = 'large', round }) => {
 
     const roundedCorners = round ? "rounded" : "";
     const boxStyle = `box ${sizes[size]} ${roundedCorners}`;
+    const { theme } = useContext(ThemeContext);
+    
+
 
     return (
-        <div className={boxStyle}>
+        <div className={boxStyle} >
             {data.map(product => (
-                <div key={product.id} className="card-main">
+                <div key={product.id} className="card-main"style={{ backgroundColor: theme.primaryColor, color:theme.foreground }}>
                     <img className="main-img" src={product.image} alt={product.title} />
                     <div className="card-content">
-                        <Link to={`/products/${product.id}`}><h2>{product.title}</h2></Link>
+                        <Link to={`/products/${product.id}`}style={{ backgroundColor: theme.background, color:theme.foreground }} ><h2>{product.title}</h2></Link>
                     </div>
                 </div>
             ))}
