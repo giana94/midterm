@@ -3,9 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  /* color-scheme: light dark;
+  color: rgba(241, 230, 230, 0.87);
+  background-color: #474646; */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -18,7 +18,7 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  /* color: #646cff; */
   text-decoration: inherit;
 }
 a:hover {
@@ -31,7 +31,7 @@ body {
   justify-content: space-around;
   min-width: 320px; 
   min-height: 100vh;
-  background-color: #dfdfdf;
+  /* background-color: #dfdfdf; */
 }
 
 h1 {
@@ -56,10 +56,10 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-
-@media (prefers-color-scheme: light) {
+/* 
+@media (prefers-color-scheme: dark) {
   :root {
-    color: #213547;
+    color: #f5f2f7;
     background-color: #ffffff;
   }
   a:hover {
@@ -68,4 +68,6 @@ button:focus-visible {
   button {
     background-color: #e9eff6;
   }
-}
+
+} */
+
